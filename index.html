@@ -1,73 +1,74 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-      content="Портфолио фронтенд-разработчика: адаптивные сайты, современный дизайн">
-    <meta name="keywords"
-      content="веб-разработка, фронтенд, портфолио, HTML, CSS, JavaScript">
-    <title>Портфолио разработчика</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <header class="header">
-      <nav class="nav">
-        <a href="#" class="logo">Portfolio</a>
-        <ul class="nav-list">
-          <li><a href="#works">Работы</a></li>
-          <li><a href="#skills">Навыки</a></li>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Портфолио Frontend разработчика. Адаптивный сайт с валидной вёрсткой и формой обратной связи.">
+  <title>Портфолио Frontend</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <h1>Моё Портфолио</h1>
+      <nav>
+        <ul>
+          <li><a href="#portfolio">Работы</a></li>
           <li><a href="#contact">Контакты</a></li>
         </ul>
-        <button class="burger" aria-label="Меню">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <section class="hero">
-        <div class="hero-content">
-          <h1>Привет, я фронтенд-разработчик</h1>
-          <p>Создаю современные и адаптивные веб-интерфейсы</p>
-          <a href="#works" class="button">Смотреть работы</a>
-        </div>
-      </section>
-
-      <section id="works" class="section">
+  <!-- Main Content -->
+  <main>
+    <!-- Блок с работой -->
+    <section id="portfolio" class="portfolio-section">
+      <div class="container">
         <h2>Мои работы</h2>
-        <div class="works-grid">
-          <article class="work-card">
-            <img src="work1.webp" alt="Проект 1" loading="lazy">
-            <h3>Лендинг компании</h3>
+        <div class="projects">
+          <!-- Пример работы (можно добавить свои проекты) -->
+          <article class="project">
+            <img src="project1.jpg" alt="Скриншот проекта 1">
+            <h3>Проект 1</h3>
+            <p>Краткое описание проекта. Технологии: HTML, CSS, JS.</p>
           </article>
-          <!-- Добавить остальные работы -->
+          <!-- Можно дублировать article для других проектов -->
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="contact" class="section">
+    <!-- Контактная форма -->
+    <section id="contact" class="contact-section">
+      <div class="container">
         <h2>Свяжитесь со мной</h2>
-        <form class="contact-form" id="contactForm">
+        <form id="contactForm" novalidate>
           <div class="form-group">
-            <input type="text" name="name" placeholder="Ваше имя" required
-              minlength="2">
+            <label for="name">Имя</label>
+            <input type="text" id="name" name="name" required placeholder="Ваше имя">
           </div>
           <div class="form-group">
-            <input type="email" name="email" placeholder="Email" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="example@mail.com">
           </div>
           <div class="form-group">
-            <textarea name="message" placeholder="Сообщение" required
-              minlength="10"></textarea>
+            <label for="message">Сообщение</label>
+            <textarea id="message" name="message" required placeholder="Ваше сообщение"></textarea>
           </div>
-          <button type="submit" class="button">Отправить</button>
+          <button type="submit">Отправить</button>
         </form>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <footer class="footer">
-      <p>&copy; 2024 Все права защищены</p>
-    </footer>
-  </body>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Мое Портфолио</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
