@@ -1,74 +1,245 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Портфолио Frontend разработчика. Адаптивный сайт с валидной вёрсткой и формой обратной связи.">
-  <title>Портфолио Frontend</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Пример адаптивного сайта в стиле портфолио с секциями Hero, Case Studies и Testimonials."
+  />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <!-- Header -->
   <header class="site-header">
-    <div class="container">
-      <h1>Моё Портфолио</h1>
-      <nav>
-        <ul>
-          <li><a href="#portfolio">Работы</a></li>
-          <li><a href="#contact">Контакты</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav class="navbar container">
+      <a href="#" class="logo">YourName</a>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#case-studies">Case Studies</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Get in Touch</a></li>
+      </ul>
+      <!-- Соц. иконки (пример: LinkedIn, Behance) -->
+      <div class="social-icons">
+        <a href="#" aria-label="LinkedIn">in</a>
+        <a href="#" aria-label="Behance">Bē</a>
+      </div>
+    </nav>
   </header>
 
-  <!-- Main Content -->
-  <main>
-    <!-- Блок с работой -->
-    <section id="portfolio" class="portfolio-section">
-      <div class="container">
-        <h2>Мои работы</h2>
-        <div class="projects">
-          <!-- Пример работы (можно добавить свои проекты) -->
-          <article class="project">
-            <img src="project1.jpg" alt="Скриншот проекта 1">
-            <h3>Проект 1</h3>
-            <p>Краткое описание проекта. Технологии: HTML, CSS, JS.</p>
-          </article>
-          <!-- Можно дублировать article для других проектов -->
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>Your Name Here</h1>
+        <p>
+          Intro text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <a href="#contact" class="btn-cta">Let’s get started</a>
+        <div class="partners">
+          <p>Worked with</p>
+          <div class="partners-logos">
+            <!-- Логотипы компаний (просто текстовые примеры) -->
+            <span>ClickUp</span>
+            <span>Dropbox</span>
+            <span>PAYCHEX</span>
+            <span>elastic</span>
+            <span>stripe</span>
+          </div>
         </div>
       </div>
-    </section>
-
-    <!-- Контактная форма -->
-    <section id="contact" class="contact-section">
-      <div class="container">
-        <h2>Свяжитесь со мной</h2>
-        <form id="contactForm" novalidate>
-          <div class="form-group">
-            <label for="name">Имя</label>
-            <input type="text" id="name" name="name" required placeholder="Ваше имя">
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required placeholder="example@mail.com">
-          </div>
-          <div class="form-group">
-            <label for="message">Сообщение</label>
-            <textarea id="message" name="message" required placeholder="Ваше сообщение"></textarea>
-          </div>
-          <button type="submit">Отправить</button>
-        </form>
+      <div class="hero-image">
+        <!-- Замените src на свою фотографию -->
+        <img src="img/hero-photo.jpg" alt="Your Photo" />
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
+  <!-- Case Studies Section -->
+  <section id="case-studies" class="case-studies-section">
+    <div class="container">
+      <h2>Case Studies</h2>
+      <p class="section-subtitle">
+        Solving user &amp; business problems since last 1+ years. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+      <div class="cases">
+        <!-- Карточка 1 -->
+        <article class="case-card">
+          <img src="img/case1.jpg" alt="Case Study 1" />
+          <div class="case-content">
+            <span class="case-tag">Web</span>
+            <h3>Work name here</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <a href="#" class="btn-case">View case study</a>
+          </div>
+        </article>
+        <!-- Карточка 2 -->
+        <article class="case-card">
+          <img src="img/case2.jpg" alt="Case Study 2" />
+          <div class="case-content">
+            <span class="case-tag">Fintech</span>
+            <h3>Work name here</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <a href="#" class="btn-case">View case study</a>
+          </div>
+        </article>
+        <!-- Карточка 3 -->
+        <article class="case-card">
+          <img src="img/case3.jpg" alt="Case Study 3" />
+          <div class="case-content">
+            <span class="case-tag">Pharma</span>
+            <h3>Work name here</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <a href="#" class="btn-case">View case study</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials-section">
+    <div class="container">
+      <h2>Testimonials</h2>
+      <p class="section-subtitle">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <div class="testimonials-grid">
+        <!-- Отзыв 1 -->
+        <article class="testimonial-card">
+          <p class="testimonial-text">
+            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.”
+          </p>
+          <div class="client-info">
+            <img src="img/client1.jpg" alt="Client 1" />
+            <div>
+              <h4>Client Name</h4>
+              <p>Position or Company</p>
+            </div>
+          </div>
+        </article>
+        <!-- Отзыв 2 -->
+        <article class="testimonial-card">
+          <p class="testimonial-text">
+            “Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua.”
+          </p>
+          <div class="client-info">
+            <img src="img/client2.jpg" alt="Client 2" />
+            <div>
+              <h4>Client Name</h4>
+              <p>Position or Company</p>
+            </div>
+          </div>
+        </article>
+        <!-- Отзыв 3 -->
+        <article class="testimonial-card">
+          <p class="testimonial-text">
+            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt.”
+          </p>
+          <div class="client-info">
+            <img src="img/client3.jpg" alt="Client 3" />
+            <div>
+              <h4>Client Name</h4>
+              <p>Position or Company</p>
+            </div>
+          </div>
+        </article>
+        <!-- Отзыв 4 -->
+        <article class="testimonial-card">
+          <p class="testimonial-text">
+            “Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua.”
+          </p>
+          <div class="client-info">
+            <img src="img/client4.jpg" alt="Client 4" />
+            <div>
+              <h4>Client Name</h4>
+              <p>Position or Company</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact (пример) -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2>Get in Touch</h2>
+      <p class="section-subtitle">
+        If you'd like to discuss a project or just want to say hello, fill out the form below.
+      </p>
+      <form class="contact-form" novalidate>
+        <div class="form-group">
+          <label for="name">Name <span>*</span></label>
+          <input type="text" id="name" name="name" required placeholder="Your Name" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email <span>*</span></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="your@email"
+          />
+        </div>
+        <div class="form-group">
+          <label for="message">Message <span>*</span></label>
+          <textarea id="message" name="message" required placeholder="Your message"></textarea>
+        </div>
+        <button type="submit" class="btn-cta">Send</button>
+      </form>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2025 Мое Портфолио</p>
+      <p>&copy; 2025 Your Name. All rights reserved.</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- JS (при необходимости) -->
+  <script>
+    // Пример базовой валидации формы
+    const form = document.querySelector('.contact-form');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      // Простая проверка
+      const name = document.getElementById('name');
+      const email = document.getElementById('email');
+      const message = document.getElementById('message');
+
+      if (!name.value.trim() || !email.value.trim() || !message.value.trim()) {
+        alert('Пожалуйста, заполните все обязательные поля.');
+        return;
+      }
+      // Дополнительная проверка email
+      const emailPattern = /^\S+@\S+\.\S+$/;
+      if (!emailPattern.test(email.value)) {
+        alert('Введите корректный email.');
+        return;
+      }
+      alert('Форма успешно отправлена!');
+      form.reset();
+    });
+  </script>
 </body>
 </html>
