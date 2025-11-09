@@ -343,18 +343,6 @@ nav a:hover {
     display: flex;
   }
 
-  /* показываем «гамбургер» */
-  #main-nav::before {
-    content: '☰';
-    font-size: 18px;
-    cursor: pointer;
-    display: block;
-  }
-
-  #main-nav.active::before {
-    content: "✕";
-  }
-
   /* героя и текст уменьшаем */
   #title_text {
     padding: 0 10px;
