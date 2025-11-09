@@ -94,7 +94,7 @@ main>section {
 /* Шапка */
 header {
   /* background: #f82e22;  */
-  background: #f82e22;
+  background: #2282f8;
   color: #fff;
   position: fixed;
   width: 100%;
@@ -674,7 +674,7 @@ header .container {
   }
 
   .prod-item {
-    width: 100%;
+    width: 80%;
     max-width: 400px;
     height: auto;
   }
