@@ -1,13 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const hamburger = document.getElementById("main-nav");
-  const navMenu = document.querySelector("nav ul");
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.getElementById("main-nav");
 
-  hamburger.addEventListener("click", function () {
-    navMenu.classList.toggle("open");
-    hamburger.classList.toggle("active");
-  });
+  if (hamburger && navMenu) {
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("open");
+      // Для доступности
+      hamburger.setAttribute(
+        "aria-expanded",
+        hamburger.classList.contains("active")
+      );
+    });
 
-  /* 2 & 3 & 4. Форма обратной связи */
+    // Закрывать меню при клике на ссылку
+    navMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("open");
+        hamburger.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+
+  /* Форма обратной связи */
   const feedbackBtn = document.getElementById("open-feedback");
   const feedbackPopup = document.getElementById("feedback-popup");
   const feedbackForm = document.getElementById("feedback-form-popup");
@@ -75,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
         submitBtn.disabled = false;
       });
   });
-  /* 8. Анимация SVG */
+  /* Анимация SVG */
   const rocketPath = document.getElementById("rocket-path");
   document.addEventListener("scroll", () => {
     const len = rocketPath.getTotalLength();
