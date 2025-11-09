@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  /* Мобильное меню */
   const hamburger = document.querySelector(".hamburger");
   const navMenu = document.getElementById("main-nav");
 
@@ -6,14 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
     hamburger.addEventListener("click", () => {
       hamburger.classList.toggle("active");
       navMenu.classList.toggle("open");
-      // Для доступности
       hamburger.setAttribute(
         "aria-expanded",
         hamburger.classList.contains("active")
       );
     });
 
-    // Закрывать меню при клике на ссылку
     navMenu.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
         hamburger.classList.remove("active");
@@ -30,13 +29,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("feedback-form-popup");
   const submitBtn = document.getElementById("submit-btn");
 
-  feedbackBtn.addEventListener("click", () =>
-    feedbackPopup.classList.add("active")
-  );
+  if (feedbackBtn) {
+    feedbackBtn.addEventListener("click", () =>
+      feedbackPopup.classList.add("active")
+    );
+  }
 
-  feedbackPopup
-    .querySelector(".close-popup")
-    .addEventListener("click", () => feedbackPopup.classList.remove("active"));
+  const closePopup = feedbackPopup?.querySelector(".close-popup");
+  if (closePopup) {
+    closePopup.addEventListener("click", () =>
+      feedbackPopup.classList.remove("active")
+    );
+  }
 
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && feedbackPopup.classList.contains("active")) {
@@ -44,8 +48,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  feedbackPopup.addEventListener("click", function (e) {
-    if (!feedbackForm.contains(e.target)) {
+  feedbackPopup?.addEventListener("click", function (e) {
+    if (!feedbackForm?.contains(e.target)) {
       feedbackPopup.classList.remove("active");
     }
   });
@@ -60,49 +64,59 @@ document.addEventListener("DOMContentLoaded", () => {
     return true;
   }
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    let valid = true;
-    [...form.elements].forEach((field) => {
-      if (field.required && !validateField(field)) {
-        field.style.borderColor = "red";
-        valid = false;
-      } else {
-        field.style.borderColor = "#ccc";
-      }
-    });
-    if (!valid) return;
-
-    submitBtn.classList.add("sending");
-    submitBtn.textContent = "Отправляем...";
-    submitBtn.disabled = true;
-
-    fetch(form.action, { method: "POST", body: new FormData(form) })
-      .then((res) => {
-        if (res.ok) {
-          submitBtn.classList.remove("sending");
-          submitBtn.classList.add("success");
-          submitBtn.textContent = "Успешно отправлено";
-        } else throw new Error("Ошибка");
-      })
-      .catch(() => {
-        submitBtn.classList.remove("sending");
-        submitBtn.textContent = "Ошибка отправки";
-        submitBtn.disabled = false;
+  if (form) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      let valid = true;
+      [...form.elements].forEach((field) => {
+        if (field.required && !validateField(field)) {
+          field.style.borderColor = "red";
+          valid = false;
+        } else {
+          field.style.borderColor = "#ccc";
+        }
       });
-  });
+      if (!valid) return;
+
+      submitBtn.classList.add("sending");
+      submitBtn.textContent = "Отправляем...";
+      submitBtn.disabled = true;
+
+      fetch(form.action, { method: "POST", body: new FormData(form) })
+        .then((res) => {
+          if (res.ok) {
+            submitBtn.classList.remove("sending");
+            submitBtn.classList.add("success");
+            submitBtn.textContent = "Успешно отправлено";
+          } else throw new Error("Ошибка");
+        })
+        .catch(() => {
+          submitBtn.classList.remove("sending");
+          submitBtn.textContent = "Ошибка отправки";
+          submitBtn.disabled = false;
+        });
+    });
+  }
+
   /* Анимация SVG */
   const rocketPath = document.getElementById("rocket-path");
-  document.addEventListener("scroll", () => {
-    const len = rocketPath.getTotalLength();
-    const scrollRatio =
-      window.scrollY / (document.body.scrollHeight - window.innerHeight);
-    rocketPath.style.strokeDasharray = len;
-    rocketPath.style.strokeDashoffset = len - len * scrollRatio;
-  });
-  document.addEventListener("mousemove", (e) => {
-    const logo = document.getElementById("animated-logo");
-    const x = (e.clientX / window.innerWidth) * 30 - 15;
-    logo.style.transform = `translate(-50%, -50%) rotate(${x}deg)`;
-  });
+  if (rocketPath) {
+    const updateRocket = () => {
+      const len = rocketPath.getTotalLength();
+      const scrollRatio =
+        window.scrollY / (document.body.scrollHeight - window.innerHeight);
+      rocketPath.style.strokeDasharray = len;
+      rocketPath.style.strokeDashoffset = len - len * scrollRatio;
+    };
+    document.addEventListener("scroll", updateRocket);
+    updateRocket(); // при загрузке
+  }
+
+  const logo = document.getElementById("animated-logo");
+  if (logo) {
+    document.addEventListener("mousemove", (e) => {
+      const x = (e.clientX / window.innerWidth) * 30 - 15;
+      logo.style.transform = `translate(-50%, -50%) rotate(${x}deg)`;
+    });
+  }
 });
