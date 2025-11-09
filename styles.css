@@ -94,7 +94,7 @@ main>section {
 /* Шапка */
 header {
   /* background: #ee3124;  */
-  background: #3dbf7c;
+  background: #ee3124;
   color: #fff;
   position: fixed;
   width: 100%;
@@ -692,7 +692,7 @@ header .container {
   }
 
   .contact-info {
-    margin-left: 30px;
+    margin-left: 50px;
   }
 
   /* Кнопки */
