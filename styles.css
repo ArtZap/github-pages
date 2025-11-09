@@ -570,12 +570,14 @@ textarea {
   .product-grid {
     display: grid;
     grid-template-columns: 1fr;
+    place-items: center;
     gap: 20px;
   }
 
   .prod-item {
     padding: 20px 15px;
     font-size: 18px;
+    width: 400px;
   }
 
   .prod-item h4 {
@@ -686,5 +688,15 @@ header .container {
     width: 100%;
     font-size: 18px;
     padding: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .prod-item {
+    width: 350px;
+  }
+
+  .contact-info {
+    margin-left: 0;
   }
 }
