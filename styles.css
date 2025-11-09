@@ -618,6 +618,12 @@ video {
   height: auto;
 }
 
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding: 20px;
+}
+
 /* Шапка */
 header .container {
   flex-wrap: wrap;
@@ -656,15 +662,6 @@ header .container {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-  }
-
-  /* Блоки преимуществ и продукции */
-  .features,
-  .product-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
   }
 
   /* Контакты */
