@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const hamburgerBtn = document.getElementById("hamburger");
-  const navList = document.querySelector("#main-nav ul");
+  const hamburger = document.getElementById("main-nav");
+  const navMenu = document.querySelector("nav ul");
 
-  hamburgerBtn.addEventListener("click", () => {
-    navList.classList.toggle("open");
-    hamburgerBtn.textContent = navList.classList.contains("open") ? "✕" : "☰";
+  hamburger.addEventListener("click", function () {
+    navMenu.classList.toggle("open");
+    hamburger.classList.toggle("active");
   });
 
   /* Форма обратной связи */

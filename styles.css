@@ -85,7 +85,7 @@ main>section {
 }
 
 .section-logo {
-  background-image: url(images/pharm_background.webp);
+  background-image: url(images/pharm_background.jpg);
   background-repeat: repeat;
   background-size: contain;
   background-position: 0;
@@ -148,7 +148,7 @@ nav a:hover {
 #hero {
   height: 100vh;
   width: 100%;
-  background-image: url(images/titul_photo.webp);
+  background-image: url(images/titul_photo.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -338,6 +338,18 @@ nav a:hover {
 
   nav ul.open {
     display: flex;
+  }
+
+  /* показываем «гамбургер» */
+  #main-nav::before {
+    content: '☰';
+    font-size: 18px;
+    cursor: pointer;
+    display: block;
+  }
+
+  #main-nav.active::before {
+    content: "✕";
   }
 
   /* героя и текст уменьшаем */
@@ -611,33 +623,13 @@ video {
   padding: 20px;
 }
 
-/* Исправляем фоновую картинку "О компании" и других секций */
-.section-logo {
-  background-size: cover;
-  background-position: center;
-}
-
 /* Шапка */
 header .container {
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-/* Гамбургер-кнопка */
-#hamburger {
-  display: none;
-  cursor: pointer;
-  font-size: 28px;
-  color: #fff;
-  background: none;
-  border: none;
-}
-
 @media (max-width: 768px) {
-  #hamburger {
-    display: block;
-  }
-
   nav ul {
     position: absolute;
     top: 70px;
@@ -666,7 +658,9 @@ header .container {
   #hero {
     min-height: 60vh;
     padding-bottom: 80px;
+    background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
   }
 
   /* Блоки преимуществ и продукции */
