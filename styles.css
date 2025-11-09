@@ -94,7 +94,7 @@ main>section {
 /* Шапка */
 header {
   /* background: #ee3124;  */
-  background: #060505;
+  background: #3d6fbf;
   color: #fff;
   position: fixed;
   width: 100%;
@@ -667,8 +667,8 @@ header .container {
   /* Блоки преимуществ и продукции */
   .features,
   .product-grid {
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 25px;
   }
 
@@ -688,6 +688,10 @@ header .container {
   .contact-form,
   .contact-info {
     width: 100%;
+  }
+
+  .contact-info{
+    margin-left: auto;
   }
 
   /* Кнопки */
