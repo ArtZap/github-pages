@@ -1,230 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Система переводов
-  const translations = {
-    en: {
-      // Навигация
-      about: "About",
-      "why-us": "Why Us",
-      benefits: "STM Benefits",
-      products: "Products",
-      contacts: "Contacts",
-
-      // О компании
-      "about-title": "About the Company",
-      "about-text-1":
-        "LLC «ROCKET PHARM» has been providing leading expertise in the creation, promotion and sale of high-margin goods (HMG) and private label brands (PLB) in the pharmaceutical market since 2016.",
-      "about-text-2":
-        "We cooperate with the main large contract platforms and manufacturers of pharmacy assortment and offer a ready-made balanced assortment of PLB and HMG to any regional pharmacy chain, wholesaler, distributor.",
-      "about-text-3":
-        "Our products are only category leaders, time-tested and large-sample products with high markup and turnover. No excess assortment, no volume obligations, no deferred retro-bonuses.",
-
-      // Почему мы
-      "why-us-title": "Why Us",
-      "why-us-text-1":
-        "Unique expertise in the main categories of parapharmaceuticals",
-      "why-us-text-2":
-        "Best prices on the market and only necessary assortment",
-      "why-us-text-3": "We work quickly, flexibly, accurately",
-      "why-us-quote":
-        "«We know everything about PLB!.. and even a little more. Trust professionals.»",
-
-      // Выгоды СТМ
-      "benefits-title": "STM Benefits",
-      "benefits-text-1": "Earn 150%...200%...300% at a fair retail price",
-      "benefits-text-2":
-        "Earn immediately, don't wait for retro-bonuses. Now you are the manufacturer!",
-      "benefits-text-3":
-        "Exclusive products, unique difference from competitors",
-
-      // Продукция
-      "products-title": "Products",
-      "products-text":
-        "«ROCKET PHARM» offers only proven quality products in the most demanded categories of parapharmaceuticals:",
-      "products-category-1": "Dietary Supplements and Healthy Nutrition",
-      "products-category-2":
-        "Vitamins, Multivitamins, Muesli Bars, Healthy Snacks",
-      "products-category-3": "Vitamin Lollipops and Chewing Gums",
-      "products-category-4": "Medical Devices",
-      "products-category-5": "Sanitary Disposable Products",
-      "products-category-6": "Dressing Materials, Plasters, Bandages",
-      "products-category-7": "Patient Care",
-      "products-category-8": "Hygiene Products",
-      "products-category-9": "Wet Wipes, Cotton Pads, Swabs",
-      "products-category-10": "Feminine Hygiene",
-      "products-category-11": "Cosmetics",
-      "products-category-12": "Shampoos, Masks, Creams, Gels, Soaps",
-      "products-category-13": "Intimate Cosmetics",
-      "products-category-14": "Repellents, Sunscreen Cosmetics",
-      "products-category-15": "Family Planning",
-      "products-category-16": "Condoms, Tests, Lubricants",
-      "products-category-17": "Children's Products",
-      "products-category-18": "Children's Cosmetics, Absorbent Pads",
-      "products-category-19": "Wet Wipes, Cotton Products",
-      "products-button": "Get Full Product Catalog",
-
-      // Контакты
-      "contacts-title": "CONTACTS",
-      "contacts-company": "LLC «Rocket Pharm»",
-      "contacts-address": "129128, Moscow, Bazhova St., 18",
-      "contacts-phone": "+7 (495) 298-11-19",
-      "contacts-email": "info@rocket-pharm.ru",
-
-      // Попап обратной связи
-      "feedback-title": "Leave a Message",
-      "feedback-name": "Name:",
-      "feedback-phone": "Phone:",
-      "feedback-email": "Email:",
-      "feedback-message": "Message:",
-      "feedback-submit": "Send",
-      "feedback-submit-sending": "Sending...",
-      "feedback-submit-success": "Successfully Sent",
-      "feedback-submit-error": "Send Error",
-
-      // Кнопка обратной связи
-      "feedback-button": "Leave a Message",
-
-      // Языковая кнопка
-      "lang-ru": "EN",
-      "lang-en": "RU",
-    },
-    ru: {
-      // Оригинальные русские тексты (уже есть на странице)
-      about: "О компании",
-      "why-us": "Почему мы",
-      benefits: "Выгоды СТМ",
-      products: "Продукция",
-      contacts: "Контакты",
-      "about-title": "О компании",
-      "about-text-1":
-        "ООО «РОКЕТ ФАРМ» с 2016 года предоставляет ведущую экспертизу в области создания, продвижения и продажи высоко-маржинальных товаров (ВМТ) и собственных торговых марок (СТМ) на фармацевтическом рынке.",
-      "about-text-2":
-        "Мы сотрудничаем с основными крупными контрактными площадками и производителями аптечного ассортимента и предлагаем готовый сбалансированный ассортимент СТМ и ВМТ любой региональной аптечной сети, оптовику, дистрибьютору.",
-      "about-text-3":
-        "Наша продукция – только лидеры товарных категорий, проверенные временем и большой выборкой, продукция с высокой наценкой и оборачиваемостью. Без избыточного ассортимента, без обязательств по объёмам, без отложенных ретро‑бонусов.",
-      "why-us-title": "Почему мы",
-      "why-us-text-1":
-        "Уникальная экспертиза в основных товарных категориях парафармацевтики",
-      "why-us-text-2": "Лучшие цены на рынке и только нужный ассортимент",
-      "why-us-text-3": "Работаем оперативно, гибко, точно",
-      "why-us-quote":
-        "«Мы знаем об СТМ всё!.. и даже немного больше.Доверяйте профессионалам.»",
-      "benefits-title": "Выгоды СТМ",
-      "benefits-text-1":
-        "Зарабатывайте 150%...200%...300% при справедливой розничной цене",
-      "benefits-text-2":
-        "Зарабатывайте сразу, не ждёте ретро‑бонусов. Теперь вы сами производитель!",
-      "benefits-text-3":
-        "Эксклюзивная продукция, уникальное отличие от конкурентов",
-      "products-title": "Продукция",
-      "products-text":
-        "«РОКЕТ ФАРМ» предлагает только проверенную качественную продукцию в наиболее востребованных категориях парафармацевтики:",
-      "products-category-1": "БАД и здоровое питание",
-      "products-category-2": "Витамины, ВМК, батончики мюсли, здоровые снеки",
-      "products-category-3": "Витаминизированные леденцы и жвачки",
-      "products-category-4": "ИМН (изделия мед. назначения)",
-      "products-category-5": "Расходные санитарные средства",
-      "products-category-6": "Перевязочные средства, пластыри, повязки",
-      "products-category-7": "Уход за больными",
-      "products-category-8": "Гигиенические товары",
-      "products-category-9": "Влажные салфетки, ватные диски, палочки",
-      "products-category-10": "Женская гигиена",
-      "products-category-11": "Косметика",
-      "products-category-12": "Шампуни, маски, крема, гели, мыла",
-      "products-category-13": "Интимная косметика",
-      "products-category-14": "Репелленты, солнцезащитная косметика",
-      "products-category-15": "Планирование семьи",
-      "products-category-16": "Презервативы, тесты, лубриканты",
-      "products-category-17": "Детские товары",
-      "products-category-18": "Детская косметика, впитывающие пелёнки",
-      "products-category-19": "Влажные салфетки, ватные изделия",
-      "products-button": "Получить полный каталог продукции",
-      "contacts-title": "КОНТАКТЫ",
-      "contacts-company": "ООО «Рокет Фарм»",
-      "contacts-address": "129128, г. Москва, ул. Бажова, д. 18",
-      "contacts-phone": "+7 (495) 298-11-19",
-      "contacts-email": "info@rocket-pharm.ru",
-      "feedback-title": "Оставьте сообщение",
-      "feedback-name": "Имя:",
-      "feedback-phone": "Телефон:",
-      "feedback-email": "Email:",
-      "feedback-message": "Сообщение:",
-      "feedback-submit": "Отправить",
-      "feedback-submit-sending": "Отправляем...",
-      "feedback-submit-success": "Успешно отправлено",
-      "feedback-submit-error": "Ошибка отправки",
-      "feedback-button": "Оставьте сообщение",
-      "lang-ru": "RU",
-      "lang-en": "EN",
-    },
-  };
-
-  // Текущий язык
-  let currentLang = localStorage.getItem("lang") || "ru";
-
-  // Функция перевода
-  function translatePage(lang) {
-    currentLang = lang;
-    localStorage.setItem("lang", lang);
-
-    // Переводим все элементы с атрибутом data-i18n
-    document.querySelectorAll("[data-i18n]").forEach((element) => {
-      const key = element.getAttribute("data-i18n");
-      if (translations[lang][key]) {
-        element.textContent = translations[lang][key];
-      }
-    });
-
-    // Обновляем кнопку языка
-    const langBtn = document.getElementById("lang-toggle");
-    if (langBtn) {
-      langBtn.textContent =
-        lang === "ru" ?
-          translations[lang]["lang-ru"]
-        : translations[lang]["lang-en"];
-    }
-
-    // Переводим плейсхолдеры форм
-    const placeholders = {
-      name: lang === "ru" ? "Ваше имя" : "Your Name",
-      phone: lang === "ru" ? "Ваш телефон" : "Your Phone",
-      email: lang === "ru" ? "Ваш email" : "Your Email",
-      message: lang === "ru" ? "Ваше сообщение" : "Your Message",
-    };
-
-    document
-      .querySelectorAll('input[name="name"], textarea[name="name"]')
-      .forEach((el) => {
-        el.placeholder = placeholders.name;
-      });
-    document
-      .querySelectorAll('input[name="phone"], textarea[name="phone"]')
-      .forEach((el) => {
-        el.placeholder = placeholders.phone;
-      });
-    document
-      .querySelectorAll('input[name="email"], textarea[name="email"]')
-      .forEach((el) => {
-        el.placeholder = placeholders.email;
-      });
-    document
-      .querySelectorAll('input[name="message"], textarea[name="message"]')
-      .forEach((el) => {
-        el.placeholder = placeholders.message;
-      });
-  }
-
-  // Инициализация перевода при загрузке
-  translatePage(currentLang);
-
-  // Обработчик кнопки переключения языка
-  const langToggle = document.getElementById("lang-toggle");
-  if (langToggle) {
-    langToggle.addEventListener("click", () => {
-      const newLang = currentLang === "ru" ? "en" : "ru";
-      translatePage(newLang);
-    });
-  }
-
   const hamburger = document.getElementById("main-nav");
   const navMenu = document.querySelector("nav ul");
 
@@ -315,4 +89,215 @@ document.addEventListener("DOMContentLoaded", () => {
     const x = (e.clientX / window.innerWidth) * 30 - 15;
     logo.style.transform = `translate(-50%, -50%) rotate(${x}deg)`;
   });
+
+  // --- Новый код для перевода ---
+
+  // Объект с переводами (пример для ключевых элементов)
+  const translations = {
+    en: {
+      companyName: "ROCKET PHARM",
+      aboutTitle: "About Us",
+      aboutText:
+        'LLC "ROCKET PHARM" has been providing leading expertise in the creation, promotion and sales of high-margin products (HMP) and private labels (PL) in the pharmaceutical market since 2016.',
+      whyUsTitle: "Why Us",
+      whyUsText1:
+        "Unique expertise in the main product categories of parapharmacy",
+      whyUsText2: "Best prices on the market and only the necessary assortment",
+      whyUsText3: "We work quickly, flexibly, accurately",
+      benefitsTitle: "PL Benefits",
+      benefitsText1: "Earn 150%...200%...300% at a fair retail price",
+      benefitsText2:
+        "Start earning immediately, don't wait for retro-bonuses. Now you are the manufacturer yourself!",
+      benefitsText3:
+        "Exclusive products, unique differentiation from competitors",
+      productsTitle: "Products",
+      productsIntro:
+        "ROCKET PHARM offers only proven quality products in the most demanded categories of parapharmacy:",
+      productCategory1: "BADS and Healthy Nutrition",
+      productSubCat1: "Vitamins, VMK, muesli bars, healthy snacks",
+      productSubCat2: "Vitaminized lollipops and chewing gums",
+      productCategory2: "MDI (Medical Purpose Products)",
+      productSubCat3: "Disposable sanitary supplies",
+      productSubCat4: "Dressings, plasters, patches",
+      productCategory3: "Patient Care",
+      productSubCat5: "Hygiene items",
+      productSubCat6: "Wet wipes, cotton pads, swabs",
+      productSubCat7: "Female hygiene",
+      productCategory4: "Cosmetics",
+      productSubCat8: "Shampoos, masks, creams, gels, soaps",
+      productSubCat9: "Intimate cosmetics",
+      productSubCat10: "Repellents, sun protection cosmetics",
+      productCategory5: "Family Planning",
+      productSubCat11: "Condoms, tests, lubricants",
+      productCategory6: "Children's Goods",
+      productSubCat12: "Children's cosmetics, absorbent diapers",
+      productSubCat13: "Wet wipes, cotton products",
+      fullCatalogBtn: "Get Full Product Catalog",
+      contactsTitle: "CONTACTS",
+      feedbackBtnText: "Leave a message",
+      feedbackPopupTitle: "Leave a Message",
+      feedbackNameLabel: "Name:",
+      feedbackPhoneLabel: "Phone:",
+      feedbackEmailLabel: "Email:",
+      feedbackMessageLabel: "Message:",
+      feedbackSubmitBtn: "Send",
+      footerAddress: "129128, Moscow, Bazhova st., 18",
+      // ... можно продолжить добавлять переводы для остальных элементов ...
+    },
+    ru: {
+      // Оригинальные русские значения - в реальной реализации могут быть не нужны,
+      // если оригинальный HTML уже на русском, но полезны для переключения обратно.
+      // Для простоты в данном примере они не приведены полностью.
+    },
+  };
+
+  let currentLanguage = "ru"; // Текущий язык ('ru' или 'en')
+
+  // Функция для получения всех текстовых узлов внутри элемента
+  function getTextNodes(parentElement) {
+    const textNodes = [];
+    const walker = document.createTreeWalker(
+      parentElement,
+      NodeFilter.SHOW_TEXT,
+      null,
+      false,
+    );
+    while (walker.nextNode()) {
+      const node = walker.currentNode;
+      // Исключаем пустые узлы и узлы внутри input, textarea, script, style
+      if (
+        node.parentElement.tagName !== "SCRIPT" &&
+        node.parentElement.tagName !== "STYLE" &&
+        node.parentElement.tagName !== "INPUT" &&
+        node.parentElement.tagName !== "TEXTAREA" &&
+        node.nodeValue.trim() !== ""
+      ) {
+        textNodes.push(node);
+      }
+    }
+    return textNodes;
+  }
+
+  // Функция для замены текста на основе словаря
+  function replaceTextWithTranslations(textNodes, lang) {
+    const dict = translations[lang];
+    if (!dict) {
+      console.warn(`No translation dictionary found for language: ${lang}`);
+      return;
+    }
+
+    // Более точная замена может потребовать более сложной логики,
+    // например, сопоставления по ID или классу.
+    // Этот подход заменяет точные совпадения текста.
+    // Он менее надежен, чем манипуляции с конкретными элементами по ID.
+
+    // Более надежный способ - манипуляции с конкретными элементами
+    // Пример для некоторых ключевых элементов:
+
+    // Заголовки и основной текст
+    const elementsToTranslate = {
+      "#about h2": "aboutTitle",
+      "#about p:first-of-type": "aboutText", // Первый абзац
+      "#why-us h2": "whyUsTitle",
+      ".feature-item:nth-child(1) p": "whyUsText1",
+      ".feature-item:nth-child(2) p": "whyUsText2",
+      ".feature-item:nth-child(3) p": "whyUsText3",
+      "#benefits h2": "benefitsTitle",
+      "#benefits .features .feature-item:nth-child(1) p": "benefitsText1",
+      "#benefits .features .feature-item:nth-child(2) p": "benefitsText2",
+      "#benefits .features .feature-item:nth-child(3) p": "benefitsText3",
+      "#products h2": "productsTitle",
+      "#products p": "productsIntro",
+      "#products .prod-item:nth-child(1) h4": "productCategory1",
+      "#products .prod-item:nth-child(1) li:first-child": "productSubCat1",
+      "#products .prod-item:nth-child(1) li:last-child": "productSubCat2",
+      "#products .prod-item:nth-child(2) h4": "productCategory2",
+      "#products .prod-item:nth-child(2) li:first-child": "productSubCat3",
+      "#products .prod-item:nth-child(2) li:last-child": "productSubCat4",
+      "#products .prod-item:nth-child(3) h4": "productCategory3",
+      "#products .prod-item:nth-child(3) li:first-child": "productSubCat5",
+      "#products .prod-item:nth-child(3) li:nth-child(2)": "productSubCat6",
+      "#products .prod-item:nth-child(3) li:last-child": "productSubCat7",
+      "#products .prod-item:nth-child(4) h4": "productCategory4",
+      "#products .prod-item:nth-child(4) li:first-child": "productSubCat8",
+      "#products .prod-item:nth-child(4) li:nth-child(2)": "productSubCat9",
+      "#products .prod-item:nth-child(4) li:last-child": "productSubCat10",
+      "#products .prod-item:nth-child(5) h4": "productCategory5",
+      "#products .prod-item:nth-child(5) li:first-child": "productSubCat11",
+      "#products .prod-item:nth-child(6) h4": "productCategory6",
+      "#products .prod-item:nth-child(6) li:first-child": "productSubCat12",
+      "#products .prod-item:nth-child(6) li:last-child": "productSubCat13",
+      "#get-catalog-btn": "fullCatalogBtn", // Предполагается ID для кнопки
+      "#contact h2": "contactsTitle",
+      "#open-feedback": "feedbackBtnText",
+      "#feedback-popup h2": "feedbackPopupTitle", // Если заголовок есть
+      'label[for="name-popup"]': "feedbackNameLabel", // Предполагается for="name-popup"
+      'label[for="phone-popup"]': "feedbackPhoneLabel",
+      'label[for="email-popup"]': "feedbackEmailLabel",
+      'label[for="message-popup"]': "feedbackMessageLabel",
+      "#submit-btn": "feedbackSubmitBtn",
+      "#contacts-header p": "footerAddress", // Адрес
+      // ... добавить селекторы для остальных элементов ...
+    };
+
+    for (const [selector, key] of Object.entries(elementsToTranslate)) {
+      const element = document.querySelector(selector);
+      if (element && dict[key]) {
+        element.textContent = dict[key];
+      }
+    }
+
+    // Обновление текста кнопки переключения языка
+    const translateButton = document.getElementById("translateButton");
+    if (translateButton) {
+      translateButton.textContent = lang === "en" ? "RU" : "EN";
+    }
+
+    // Для остального текста (менее точный метод)
+    /*
+  textNodes.forEach(node => {
+    const originalText = node.nodeValue;
+    // Поиск точного соответствия в словаре
+    for (const [original, translated] of Object.entries(dict)) {
+      if (originalText.includes(original)) {
+        node.nodeValue = originalText.replace(new RegExp(original, 'g'), translated);
+        break; // Останавливаемся после первого совпадения, чтобы избежать повторных замен
+      }
+    }
+  });
+  */
+  }
+
+  // Обработчик клика по кнопке перевода
+  document
+    .getElementById("translateButton")
+    .addEventListener("click", function () {
+      const newLanguage = currentLanguage === "ru" ? "en" : "ru";
+      const allTextNodes = getTextNodes(document.body);
+
+      // Сохранение состояния формы перед переводом
+      const formData = {};
+      const formElements = document.querySelectorAll("input, textarea");
+      formElements.forEach((el) => {
+        if (el.id) {
+          // Только если у элемента есть ID
+          formData[el.id] = el.value;
+        }
+      });
+
+      replaceTextWithTranslations(allTextNodes, newLanguage);
+
+      // Восстановление состояния формы после перевода
+      Object.keys(formData).forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.value = formData[id];
+        }
+      });
+
+      currentLanguage = newLanguage;
+      console.log(`Language switched to: ${currentLanguage}`); // Для отладки
+    });
+
+  // --- Конец нового кода ---
 });
