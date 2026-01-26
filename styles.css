@@ -700,3 +700,41 @@ header .container {
     margin-left: 0;
   }
 }
+
+/* Кнопка переключения языка */
+.lang-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 20px;
+}
+
+.lang-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.lang-btn:active {
+  transform: scale(0.95);
+}
+
+/* Адаптивность кнопки языка */
+@media (max-width: 768px) {
+  .lang-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  header .container {
+    padding-right: 60px;
+  }
+}

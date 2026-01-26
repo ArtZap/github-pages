@@ -4,236 +4,238 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rocket Pharm</title>
-    <link rel="icon" href="images/site_icon.webp" type="image/png">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <header id="site-header">
+    <!-- Шапка сайта -->
+    <header>
       <div class="container">
-        <img src="images/head_logo.webp" alt="Rocket Pharm" class="head-logo">
-        <nav id="main-nav">
+        <img src="images/logo.svg" alt="Rocket Pharm" class="head-logo">
+        <nav>
+          <button id="main-nav"></button>
           <ul>
-            <li><a href="#about">О компании</a></li>
-            <li><a href="#why-us">Почему мы</a></li>
-            <li><a href="#benefits">Выгоды СТМ</a></li>
-            <li><a href="#products">Продукция</a></li>
-            <li><a href="#kontakt">Контакты</a></li>
+            <li><a href="#about" data-i18n="about">О компании</a></li>
+            <li><a href="#why-us" data-i18n="why-us">Почему мы</a></li>
+            <li><a href="#benefits" data-i18n="benefits">Выгоды СТМ</a></li>
+            <li><a href="#products" data-i18n="products">Продукция</a></li>
+            <li><a href="#kontakt" data-i18n="contacts">Контакты</a></li>
           </ul>
         </nav>
+        <!-- Кнопка переключения языка -->
+        <button id="lang-toggle" class="lang-btn">RU</button>
       </div>
     </header>
 
-    <main>
-      <!-- Геро-секция -->
-      <div id="hero">
+    <!-- Герой-секция -->
+    <section id="hero">
+      <div class="container">
+        <h1 id="title_text" data-i18n="hero-title">ROCKET PHARM</h1>
+        <p class="tagline" data-i18n="hero-tagline">Ведущая экспертиза в области
+          СТМ и ВМТ</p>
+        <button id="open-feedback" data-i18n="feedback-button">Оставьте
+          сообщение</button>
       </div>
+    </section>
 
-      <!-- О компании -->
-      <section id="about" class="section-white">
-        <div class="container">
-          <h2>О компании</h2>
-          <p>ООО «РОКЕТ ФАРМ» с 2016 года предоставляет ведущую экспертизу в
-            области создания, продвижения и продажи высоко-маржинальных товаров
-            (ВМТ) и собственных торговых марок (СТМ) на фармацевтическом
-            рынке.</p>
-          <p>Мы сотрудничаем с основными крупными контрактными площадками и
-            производителями аптечного ассортимента и предлагаем готовый
-            сбалансированный ассортимент СТМ и ВМТ любой региональной аптечной
-            сети, оптовику, дистрибьютору.</p>
-          <p>Наша продукция – только лидеры товарных категорий, проверенные
-            временем и большой выборкой, продукция с высокой наценкой и
-            оборачиваемостью. Без избыточного ассортимента, без обязательств по
-            объёмам, без отложенных ретро‑бонусов.</p>
-        </div>
-      </section>
-
-      <!-- Почему мы -->
-      <section id="why-us" class="section-logo">
-        <div class="container">
-          <h2>Почему мы</h2>
-          <div class="features">
-            <div class="feature-item">
-              <img src="images/icon-owl.webp" alt="Сова">
-              <p>Уникальная экспертиза в основных товарных категориях
-                парафармацевтики</p>
-            </div>
-            <div class="feature-item">
-              <img src="images/icon-piggy.webp" alt="Свинья-копилка">
-              <p>Лучшие цены на рынке и только нужный ассортимент</p>
-            </div>
-            <div class="feature-item">
-              <img src="images/icon-compass.webp" alt="Часы/Компас">
-              <p>Работаем оперативно, гибко, точно</p>
-            </div>
-          </div>
-          <p class="tagline">«Мы знаем об СТМ всё!.. и даже немного
-            больше.<br>Доверяйте профессионалам.»</p>
-        </div>
-      </section>
-
-      <!-- Выгоды СТМ -->
-      <section id="benefits" class="section-white">
-        <div class="container">
-          <h2>Выгоды СТМ</h2>
-          <div class="features">
-            <div class="feature-item">
-              <img src="images/icon-lamp.webp" alt="Лампа-доллар">
-              <p>Зарабатывайте 150%...200%...300% при справедливой розничной
-                цене</p>
-            </div>
-            <div class="feature-item">
-              <img src="images/icon-rock.webp" alt="Рок-пальцы">
-              <p>Зарабатывайте сразу, не ждёте ретро‑бонусов. Теперь вы сами
-                производитель!</p>
-            </div>
-            <div class="feature-item">
-              <img src="images/icon-rocket-new.webp" alt="Ракета">
-              <p>Эксклюзивная продукция, уникальное отличие от конкурентов</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Продукция -->
-      <section id="products" class="section-red">
-        <div class="container">
-          <h2>Продукция</h2>
-          <p>«РОКЕТ ФАРМ» предлагает только проверенную качественную продукцию
-            в наиболее востребованных категориях парафармацевтики:</p>
-          <div class="product-grid">
-            <div class="prod-item">
-              <img src="images/icon-carrot.webp" alt="Морковь">
-              <h4>БАД и здоровое питание</h4>
-              <ul>
-                <li>Витамины, ВМК, батончики мюсли, здоровые снеки</li>
-                <li>Витаминизированные леденцы и жвачки</li>
-              </ul>
-            </div>
-            <div class="prod-item">
-              <img src="images/icon-firstaid.webp" alt="Аптечка">
-              <h4>ИМН (изделия мед. назначения)</h4>
-              <ul>
-                <li>Расходные санитарные средства</li>
-                <li>Перевязочные средства, пластыри, повязки</li>
-                <li>Уход за больными</li>
-              </ul>
-            </div>
-            <div class="prod-item">
-              <img src="images/icon-hygiene.webp" alt="Руки-капля">
-              <h4>Гигиенические товары</h4>
-              <ul>
-                <li>Влажные салфетки, ватные диски, палочки</li>
-                <li>Женская гигиена</li>
-              </ul>
-            </div>
-            <div class="prod-item">
-              <img src="images/icon-cosmetic.webp" alt="Цветочек">
-              <h4>Косметика</h4>
-              <ul>
-                <li>Шампуни, маски, крема, гели, мыла</li>
-                <li>Интимная косметика</li>
-                <li>Репелленты, солнцезащитная косметика</li>
-              </ul>
-            </div>
-            <div class="prod-item">
-              <img src="images/icon-family.webp" alt="Семья">
-              <h4>Планирование семьи</h4>
-              <ul>
-                <li>Презервативы, тесты, лубриканты</li>
-              </ul>
-            </div>
-            <div class="prod-item">
-              <img src="images/icon-child.webp" alt="Ребенок">
-              <h4>Детские товары</h4>
-              <ul>
-                <li>Детская косметика, впитывающие пелёнки</li>
-                <li>Влажные салфетки, ватные изделия</li>
-              </ul>
-            </div>
-          </div>
-          <div id="feedback-button" class="container">
-            <button id="open-feedback">Получить полный каталог
-              продукции</button>
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-    <div class="clearfix colelem" id="contacts-section">
-      <!-- Якорь для навигации -->
-      <a class="anchor_item" id="kontakt"></a>
-
-      <!-- Заголовок секции -->
-      <div class="clearfix" id="contacts-header">
-        <h2>КОНТАКТЫ</h2>
-        <div class="divider-line"></div>
+    <!-- О компании -->
+    <section id="about" class="section-white">
+      <div class="container">
+        <h2 data-i18n="about-title">О компании</h2>
+        <p data-i18n="about-text-1">ООО «РОКЕТ ФАРМ» с 2016 года предоставляет
+          ведущую экспертизу в области создания, продвижения и продажи
+          высоко-маржинальных товаров (ВМТ) и собственных торговых марок (СТМ)
+          на фармацевтическом рынке.</p>
+        <p data-i18n="about-text-2">Мы сотрудничаем с основными крупными
+          контрактными площадками и производителями аптечного ассортимента и
+          предлагаем готовый сбалансированный ассортимент СТМ и ВМТ любой
+          региональной аптечной сети, оптовику, дистрибьютору.</p>
+        <p data-i18n="about-text-3">Наша продукция – только лидеры товарных
+          категорий, проверенные временем и большой выборкой, продукция с
+          высокой наценкой и оборачиваемостью. Без избыточного ассортимента, без
+          обязательств по объёмам, без отложенных ретро‑бонусов.</p>
       </div>
+    </section>
 
-      <div class="contact-container">
-        <!-- Левая колонка - форма обратной связи -->
-        <div class="contact-form">
-          <form id="feedback-form" action="send.php" method="POST">
-            <div class="form-group">
-              <input type="text" id="name" name="name" required
-                placeholder="Ваше имя">
-            </div>
-            <div class="form-group">
-              <input type="email" id="email" name="email" required
-                placeholder="E-mail">
-            </div>
-            <div class="form-group">
-              <input type="tel" id="phone" name="phone" required
-                placeholder="Телефон (обязательно)">
-            </div>
-            <div class="form-group">
-              <textarea id="message" name="message" rows="4"
-                placeholder="Сообщение"></textarea>
-            </div>
-            <button type="submit" class="submit-btn-form">Отправить</button>
-          </form>
+    <!-- Почему мы -->
+    <section id="why-us" class="section-red">
+      <div class="container">
+        <h2 data-i18n="why-us-title">Почему мы</h2>
+        <div class="features">
+          <div class="feature-item">
+            <img src="images/expertise.svg" alt="Экспертиза">
+            <p data-i18n="why-us-text-1">Уникальная экспертиза в основных
+              товарных категориях парафармацевтики</p>
+          </div>
+          <div class="feature-item">
+            <img src="images/price.svg" alt="Цены">
+            <p data-i18n="why-us-text-2">Лучшие цены на рынке и только нужный
+              ассортимент</p>
+          </div>
+          <div class="feature-item">
+            <img src="images/speed.svg" alt="Скорость">
+            <p data-i18n="why-us-text-3">Работаем оперативно, гибко, точно</p>
+          </div>
+        </div>
+        <p class="tagline" data-i18n="why-us-quote">«Мы знаем об СТМ всё!.. и
+          даже немного больше. Доверяйте профессионалам.»</p>
+      </div>
+    </section>
+
+    <!-- Выгоды СТМ -->
+    <section id="benefits" class="section-white">
+      <div class="container">
+        <h2 data-i18n="benefits-title">Выгоды СТМ</h2>
+        <div class="features">
+          <div class="feature-item">
+            <img src="images/profit.svg" alt="Прибыль">
+            <p data-i18n="benefits-text-1">Зарабатывайте 150%...200%...300% при
+              справедливой розничной цене</p>
+          </div>
+          <div class="feature-item">
+            <img src="images/money.svg" alt="Деньги">
+            <p data-i18n="benefits-text-2">Зарабатывайте сразу, не ждёте
+              ретро‑бонусов. Теперь вы сами производитель!</p>
+          </div>
+          <div class="feature-item">
+            <img src="images/exclusive.svg" alt="Эксклюзив">
+            <p data-i18n="benefits-text-3">Эксклюзивная продукция, уникальное
+              отличие от конкурентов</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Продукция -->
+    <section id="products" class="section-red">
+      <div class="container">
+        <h2 data-i18n="products-title">Продукция</h2>
+        <p data-i18n="products-text">«РОКЕТ ФАРМ» предлагает только проверенную
+          качественную продукцию в наиболее востребованных категориях
+          парафармацевтики:</p>
+
+        <div class="product-grid">
+          <div class="prod-item">
+            <img src="images/supplements.svg" alt="БАД">
+            <h4 data-i18n="products-category-1">БАД и здоровое питание</h4>
+            <ul>
+              <li data-i18n="products-category-2">Витамины, ВМК, батончики
+                мюсли, здоровые снеки</li>
+              <li data-i18n="products-category-3">Витаминизированные леденцы и
+                жвачки</li>
+            </ul>
+          </div>
+          <div class="prod-item">
+            <img src="images/medical.svg" alt="ИМН">
+            <h4 data-i18n="products-category-4">ИМН (изделия мед.
+              назначения)</h4>
+            <ul>
+              <li data-i18n="products-category-5">Расходные санитарные
+                средства</li>
+              <li data-i18n="products-category-6">Перевязочные средства,
+                пластыри, повязки</li>
+              <li data-i18n="products-category-7">Уход за больными</li>
+            </ul>
+          </div>
+          <div class="prod-item">
+            <img src="images/hygiene.svg" alt="Гигиена">
+            <h4 data-i18n="products-category-8">Гигиенические товары</h4>
+            <ul>
+              <li data-i18n="products-category-9">Влажные салфетки, ватные
+                диски, палочки</li>
+              <li data-i18n="products-category-10">Женская гигиена</li>
+            </ul>
+          </div>
+          <div class="prod-item">
+            <img src="images/cosmetics.svg" alt="Косметика">
+            <h4 data-i18n="products-category-11">Косметика</h4>
+            <ul>
+              <li data-i18n="products-category-12">Шампуни, маски, крема, гели,
+                мыла</li>
+              <li data-i18n="products-category-13">Интимная косметика</li>
+              <li data-i18n="products-category-14">Репелленты, солнцезащитная
+                косметика</li>
+            </ul>
+          </div>
+          <div class="prod-item">
+            <img src="images/family.svg" alt="Семья">
+            <h4 data-i18n="products-category-15">Планирование семьи</h4>
+            <ul>
+              <li data-i18n="products-category-16">Презервативы, тесты,
+                лубриканты</li>
+            </ul>
+          </div>
+          <div class="prod-item">
+            <img src="images/children.svg" alt="Дети">
+            <h4 data-i18n="products-category-17">Детские товары</h4>
+            <ul>
+              <li data-i18n="products-category-18">Детская косметика,
+                впитывающие пелёнки</li>
+              <li data-i18n="products-category-19">Влажные салфетки, ватные
+                изделия</li>
+            </ul>
+          </div>
         </div>
 
-        <!-- Правая колонка - контактная информация -->
+        <div style="text-align: center; margin-top: 40px;">
+          <button id="products-button" data-i18n="products-button">Получить
+            полный каталог продукции</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="kontakt" class="section-white">
+      <div class="container">
+        <h2 data-i18n="contacts-title">КОНТАКТЫ</h2>
         <div class="contact-info">
-          <div class="contact-detail">
-            <h3>ООО «Рокет Фарм»</h3>
-          </div>
-          <div class="contact-detail">
-            <img src="images/icon-location.webp" alt="icon-location">
-            <p>129128, г. Москва, ул. Бажова, д. 18</p>
-          </div>
-          <div class="contact-detail">
-            <img src="images/icon-phone.webp" alt="icon-phone">
-            <a href="tel:+74952981119">+7 (495) 298-11-19</a>
-          </div>
-          <div class="contact-detail">
-            <img src="images/icon-email.webp" alt="icon-email">
-            <a href="mailto:info@rocket-pharm.ru">info@rocket-pharm.ru</a>
-          </div>
+          <p><strong data-i18n="contacts-company">ООО «Рокет Фарм»</strong></p>
+          <p data-i18n="contacts-address">129128, г. Москва, ул. Бажова, д.
+            18</p>
+          <p><a href="tel:+74952981119" data-i18n="contacts-phone">+7 (495)
+              298-11-19</a></p>
+          <p><a href="mailto:info@rocket-pharm.ru"
+              data-i18n="contacts-email">info@rocket-pharm.ru</a></p>
         </div>
+      </div>
+    </section>
+
+    <!-- Попап обратной связи -->
+    <div id="feedback-popup" class="popup">
+      <div id="feedback-form-popup">
+        <span class="close-popup">&times;</span>
+        <h3 data-i18n="feedback-title">Оставьте сообщение</h3>
+        <form action="send.php" method="POST" id="feedback-form">
+          <label>
+            <span data-i18n="feedback-name">Имя:</span>
+            <input type="text" name="name" placeholder="Ваше имя" required>
+          </label>
+          <label>
+            <span data-i18n="feedback-phone">Телефон:</span>
+            <input type="tel" name="phone" placeholder="Ваш телефон" required>
+          </label>
+          <label>
+            <span data-i18n="feedback-email">Email:</span>
+            <input type="email" name="email" placeholder="Ваш email" required>
+          </label>
+          <label>
+            <span data-i18n="feedback-message">Сообщение:</span>
+            <textarea name="message" placeholder="Ваше сообщение"
+              rows="4"></textarea>
+          </label>
+          <button type="submit" id="submit-btn"
+            data-i18n="feedback-submit">Отправить</button>
+        </form>
       </div>
     </div>
 
-    <!-- Popup обратной связи -->
-    <div id="feedback-popup" class="popup hidden">
-      <span class="close-popup">&times;</span>
-      <form id="feedback-form-popup" action="send.php" method="POST" novalidate>
-        <h3>Оставьте сообщение</h3>
-        <label>Имя:<input type="text" name="name" required></label>
-        <label>Телефон:<input type="text" name="phone" required></label>
-        <label>Email:<input type="email" name="email" required></label>
-        <label>Сообщение:<textarea name="message" required></textarea></label>
-        <button type="submit" id="submit-btn">Отправить</button>
-      </form>
-    </div>
-
-    <!-- SVG-элемент для анимации -->
-    <svg id="animated-logo" width="100" height="100" viewBox="0 0 100 100">
-      <path id="rocket-path" d="M10,90 L50,10 L90,90 Z" stroke="#b30000"
-        stroke-width="4" fill="none"></path>
+    <!-- SVG анимация -->
+    <svg id="animated-logo" viewBox="0 0 100 100">
+      <path id="rocket-path" d="M20,50 Q50,20 80,50 T140,50" stroke="#ee3124"
+        stroke-width="2" fill="none" stroke-dasharray="1000"
+        stroke-dashoffset="1000" />
     </svg>
 
+    <!-- Подключение скриптов -->
     <script src="script.js"></script>
   </body>
 </html>
