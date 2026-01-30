@@ -259,3 +259,109 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // --- КОНЕЦ НОВОГО КОДА ---
 });
+
+const translations = {
+    ru: {
+        nav_about: "О компании",
+        nav_why: "Почему мы",
+        nav_benefits: "Выгоды СТМ",
+        nav_products: "Продукция",
+        nav_contacts: "Контакты",
+
+        hero_subtitle:
+            "Leading expertise in creating and promoting high-margin products",
+
+        about_title: "О компании",
+        about_p1:
+            "ООО «РОКЕТ ФАРМ» с 2016 года предоставляет ведущую экспертизу в области создания, продвижения и продажи высоко-маржинальных товаров.",
+        about_p2:
+            "Мы сотрудничаем с основными крупными контрактными площадками и производителями аптечного ассортимента.",
+        about_p3:
+            "Наша продукция – только лидеры товарных категорий с высокой оборачиваемостью.",
+
+        why_title: "Почему мы",
+        why_1:
+            "Уникальная экспертиза в основных товарных категориях парафармацевтики",
+        why_2:
+            "Лучшие цены на рынке и только нужный ассортимент",
+        why_3:
+            "Работаем оперативно, гибко, точно",
+        why_quote:
+            "«Мы знаем об СТМ всё!.. и даже немного больше»",
+
+        benefits_title: "Выгоды СТМ",
+        benefits_1:
+            "Зарабатывайте 150%...200%...300% при справедливой цене",
+        benefits_2:
+            "Зарабатывайте сразу, не ждёте ретро-бонусов",
+        benefits_3:
+            "Эксклюзивная продукция, уникальное отличие",
+
+        catalog_btn: "Получить полный каталог продукции",
+        contact_btn: "Связаться с нами"
+    },
+
+    en: {
+        nav_about: "About us",
+        nav_why: "Why us",
+        nav_benefits: "Private Label Benefits",
+        nav_products: "Products",
+        nav_contacts: "Contacts",
+
+        hero_subtitle:
+            "Leading expertise in creating and promoting high-margin products",
+
+        about_title: "About the company",
+        about_p1:
+            "Rocket Pharm LLC has been providing leading expertise in the development and promotion of high-margin products since 2016.",
+        about_p2:
+            "We cooperate with major contract manufacturing platforms and pharmaceutical producers.",
+        about_p3:
+            "Our products are category leaders with high profitability and turnover.",
+
+        why_title: "Why choose us",
+        why_1:
+            "Unique expertise in key parapharmaceutical categories",
+        why_2:
+            "Best market prices and optimized assortment",
+        why_3:
+            "Fast, flexible and precise operations",
+        why_quote:
+            "“We know everything about private labels… and even more”",
+
+        benefits_title: "Private Label Benefits",
+        benefits_1:
+            "Earn 150%…200%…300% with fair retail pricing",
+        benefits_2:
+            "Earn immediately without waiting for retro bonuses",
+        benefits_3:
+            "Exclusive products with strong competitive advantage",
+
+        catalog_btn: "Get full product catalog",
+        contact_btn: "Contact us"
+    }
+};
+
+let currentLang = localStorage.getItem("lang") || "ru";
+
+function applyLanguage(lang) {
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.dataset.i18n;
+        if (translations[lang][key]) {
+            el.textContent = translations[lang][key];
+        }
+    });
+
+    document.getElementById("translateButton").textContent =
+        lang === "ru" ? "EN" : "RU";
+
+    document.documentElement.lang = lang;
+    localStorage.setItem("lang", lang);
+}
+
+document.getElementById("translateButton").addEventListener("click", () => {
+    currentLang = currentLang === "ru" ? "en" : "ru";
+    applyLanguage(currentLang);
+});
+
+applyLanguage(currentLang);
