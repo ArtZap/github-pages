@@ -8,7 +8,7 @@
   src: url('fonts/ofont.ru_NunitoBold.ttf') format('truetype');
 }
 
-/* Базовые стили */
+/* Р‘Р°Р·РѕРІС‹Рµ СЃС‚РёР»Рё */
 *,
 html {
   scroll-behavior: smooth !important;
@@ -51,12 +51,12 @@ p {
   margin-bottom: 15px;
 }
 
-/* Общие отступы между секциями */
+/* РћР±С‰РёРµ РѕС‚СЃС‚СѓРїС‹ РјРµР¶РґСѓ СЃРµРєС†РёСЏРјРё */
 main>section {
   padding: 60px 0;
 }
 
-/* Секции */
+/* РЎРµРєС†РёРё */
 .section-white,
 .section-red,
 #about,
@@ -91,7 +91,7 @@ main>section {
   background-position: 0;
 }
 
-/* Шапка */
+/* РЁР°РїРєР° */
 header {
   /* background: #f82e22;  */
   background: #f82e22;
@@ -144,7 +144,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Герой */
+/* Р“РµСЂРѕР№ */
 #hero {
   height: 100vh;
   width: 100%;
@@ -156,7 +156,7 @@ nav a:hover {
   padding: 0 0 260px 0;
 }
 
-/* Блоки преимуществ */
+/* Р‘Р»РѕРєРё РїСЂРµРёРјСѓС‰РµСЃС‚РІ */
 .features {
   display: flex;
   flex-wrap: wrap;
@@ -181,7 +181,7 @@ nav a:hover {
   margin-top: 20px;
 }
 
-/* кнопка обратной связи */
+/* РєРЅРѕРїРєР° РѕР±СЂР°С‚РЅРѕР№ СЃРІСЏР·Рё */
 #feedback-button {
   text-align: center;
   margin: 50px auto 0;
@@ -203,7 +203,7 @@ nav a:hover {
   background: #9c0a00;
 }
 
-/* Попапы */
+/* РџРѕРїР°РїС‹ */
 .popup {
   position: fixed;
   top: 0;
@@ -234,7 +234,7 @@ nav a:hover {
   cursor: pointer;
 }
 
-/* Popup обратной связи */
+/* Popup РѕР±СЂР°С‚РЅРѕР№ СЃРІСЏР·Рё */
 #feedback-popup {
   background: rgba(0, 0, 0, 0.6);
   z-index: 200;
@@ -283,7 +283,7 @@ nav a:hover {
   background: #c6281c;
 }
 
-/* SVG-анимация */
+/* SVG-Р°РЅРёРјР°С†РёСЏ */
 #animated-logo {
   position: fixed;
   bottom: 10px;
@@ -295,34 +295,34 @@ nav a:hover {
 }
 
 /* ------------------------
-   Адаптивная верстка
+   РђРґР°РїС‚РёРІРЅР°СЏ РІРµСЂСЃС‚РєР°
    ------------------------ */
-/* планшеты и небольшие десктопы */
+/* РїР»Р°РЅС€РµС‚С‹ Рё РЅРµР±РѕР»СЊС€РёРµ РґРµСЃРєС‚РѕРїС‹ */
 @media (max-width: 1024px) {
 
-  /* уменьшаем отступы контейнера */
+  /* СѓРјРµРЅСЊС€Р°РµРј РѕС‚СЃС‚СѓРїС‹ РєРѕРЅС‚РµР№РЅРµСЂР° */
   .container {
     padding: 20px 15px;
   }
 
-  /* подгоняем заголовки */
+  /* РїРѕРґРіРѕРЅСЏРµРј Р·Р°РіРѕР»РѕРІРєРё */
   h2 {
     margin-bottom: 15px;
   }
 
-  /* упрощаем геро-секцию */
+  /* СѓРїСЂРѕС‰Р°РµРј РіРµСЂРѕ-СЃРµРєС†РёСЋ */
   #hero {
     padding-bottom: 200px;
   }
 }
 
-/* мобильные экраны */
+/* РјРѕР±РёР»СЊРЅС‹Рµ СЌРєСЂР°РЅС‹ */
 @media (max-width: 768px) {
   #animated-logo {
     visibility: hidden;
   }
 
-  /* меню превращаем в колонку */
+  /* РјРµРЅСЋ РїСЂРµРІСЂР°С‰Р°РµРј РІ РєРѕР»РѕРЅРєСѓ */
   nav ul {
     flex-direction: column;
     gap: 10px;
@@ -333,16 +333,16 @@ nav a:hover {
     width: 200px;
     padding: 10px;
     display: none;
-    /* по умолчанию скрыто */
+    /* РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ СЃРєСЂС‹С‚Рѕ */
   }
 
   nav ul.open {
     display: flex;
   }
 
-  /* показываем «гамбургер» */
+  /* РїРѕРєР°Р·С‹РІР°РµРј В«РіР°РјР±СѓСЂРіРµСЂВ» */
   #main-nav::before {
-    content: '☰';
+    content: 'в°';
     color: #fff;
     font-size: 18px;
     cursor: pointer;
@@ -350,22 +350,22 @@ nav a:hover {
   }
 
   #main-nav.active::before {
-    content: "✕";
+    content: "вњ•";
   }
 
-  /* героя и текст уменьшаем */
+  /* РіРµСЂРѕСЏ Рё С‚РµРєСЃС‚ СѓРјРµРЅСЊС€Р°РµРј */
   #title_text {
     padding: 0 10px;
   }
 
-  /* блок преимуществ — одна колонка */
+  /* Р±Р»РѕРє РїСЂРµРёРјСѓС‰РµСЃС‚РІ вЂ” РѕРґРЅР° РєРѕР»РѕРЅРєР° */
   .features {
     flex-direction: column;
     gap: 20px;
     align-items: center;
   }
 
-  /* подстраиваем кнопки */
+  /* РїРѕРґСЃС‚СЂР°РёРІР°РµРј РєРЅРѕРїРєРё */
   button,
   #submit-btn,
   #open-feedback {
@@ -376,7 +376,7 @@ nav a:hover {
 
 
 
-/* Стили для секции продукции */
+/* РЎС‚РёР»Рё РґР»СЏ СЃРµРєС†РёРё РїСЂРѕРґСѓРєС†РёРё */
 #products {
   padding: 20px 0;
 }
@@ -442,7 +442,7 @@ nav a:hover {
   line-height: 1.5;
 }
 
-/* Адаптация для мобильных */
+/* РђРґР°РїС‚Р°С†РёСЏ РґР»СЏ РјРѕР±РёР»СЊРЅС‹С… */
 @media (max-width: 768px) {
   .product-grid {
     grid-template-columns: 1fr;
@@ -459,7 +459,7 @@ nav a:hover {
   }
 }
 
-/* Стили секции контактов */
+/* РЎС‚РёР»Рё СЃРµРєС†РёРё РєРѕРЅС‚Р°РєС‚РѕРІ */
 #contacts-section {
   padding: 60px 0;
   background: #f9f9f9;
@@ -539,7 +539,7 @@ textarea {
   background: #ee3124;
 }
 
-/* --- Улучшенная мобильная адаптация --- */
+/* --- РЈР»СѓС‡С€РµРЅРЅР°СЏ РјРѕР±РёР»СЊРЅР°СЏ Р°РґР°РїС‚Р°С†РёСЏ --- */
 @media (max-width: 768px) {
   body {
     font-size: 18px;
@@ -611,9 +611,9 @@ textarea {
   }
 }
 
-/* --- ДОПОЛНИТЕЛЬНЫЕ ПРАВКИ ДЛЯ МОБИЛЬНОЙ АДАПТАЦИИ --- */
+/* --- Р”РћРџРћР›РќРРўР•Р›Р¬РќР«Р• РџР РђР’РљР Р”Р›РЇ РњРћР‘РР›Р¬РќРћР™ РђР”РђРџРўРђР¦РР --- */
 
-/* Общие корректировки */
+/* РћР±С‰РёРµ РєРѕСЂСЂРµРєС‚РёСЂРѕРІРєРё */
 img,
 video {
   max-width: 100%;
@@ -626,7 +626,7 @@ video {
   padding: 20px;
 }
 
-/* Шапка */
+/* РЁР°РїРєР° */
 header .container {
   flex-wrap: wrap;
   justify-content: space-between;
@@ -657,7 +657,7 @@ header .container {
     height: 55px;
   }
 
-  /* Герой */
+  /* Р“РµСЂРѕР№ */
   #hero {
     min-height: 60vh;
     padding-bottom: 80px;
@@ -666,7 +666,7 @@ header .container {
     background-position: center;
   }
 
-  /* Контакты */
+  /* РљРѕРЅС‚Р°РєС‚С‹ */
   .contact-container {
     flex-direction: column;
     align-items: stretch;
@@ -682,7 +682,7 @@ header .container {
     margin-left: 50px;
   }
 
-  /* Кнопки */
+  /* РљРЅРѕРїРєРё */
   #open-feedback,
   .submit-btn-form {
     width: 100%;
@@ -699,135 +699,4 @@ header .container {
   .contact-info {
     margin-left: 0;
   }
-}
-
-
-/* ... (все существующие стили из styles.css) ... */
-
-/* Стили для кнопки перевода */
-#translateButton {
-    padding: 8px 16px;
-    background-color: #ee3124; /* Цвет фона как у других кнопок */
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px; /* Уменьшен размер для компактности */
-    transition: background-color 0.3s;
-    margin-left: 10px; /* Отступ от меню */
-}
-
-#translateButton:hover {
-    background-color: #c6281c; /* Темнее при наведении */
-}
-
-#translateButton:disabled {
-    background-color: #cccccc; /* Серый цвет при отключении */
-    cursor: not-allowed;
-}
-
-/* Стили для элемента ошибки */
-#translation-error {
-    position: fixed;
-    top: 70px; /* Ниже шапки */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #f8d7da;
-    color: #721c24;
-    padding: 10px 20px;
-    border: 1px solid #f5c6cb;
-    border-radius: 4px;
-    z-index: 10000; /* Высокий z-index для отображения поверх других элементов */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-/* Стили для кнопки "Получить полный каталог" */
-.centered-button {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.cta-button {
-    padding: 12px 24px;
-    background-color: #ee3124;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-    background-color: #c6281c;
-}
-
-/* --- Улучшенная мобильная адаптация --- */
-@media (max-width: 768px) {
-    /* ... (существующие стили для мобильных) ... */
-
-    /* Адаптация кнопки перевода */
-    #translateButton {
-        font-size: 12px;
-        padding: 6px 12px;
-        margin-left: 5px; /* Меньше отступ на мобильных */
-    }
-
-    /* Адаптация элемента ошибки */
-    #translation-error {
-        top: 60px; /* Корректировка под мобильную шапку */
-        font-size: 14px;
-        padding: 8px 12px;
-        width: calc(100% - 40px); /* Учитываем отступы контейнера */
-        max-width: calc(100% - 40px);
-    }
-
-    /* Адаптация шапки для размещения кнопки */
-    header .container {
-        flex-wrap: nowrap; /* Пытаемся держать в строку */
-        justify-content: space-between;
-    }
-
-    nav ul {
-        order: 1; /* Перемещаем меню в конец строки */
-    }
-
-    #translateButton {
-        order: 2; /* Перемещаем кнопку в конец строки после меню */
-        align-self: center;
-    }
-
-    /* На очень маленьких экранах возможно переполнение */
-    @media (max-width: 480px) {
-        header .container {
-            flex-wrap: wrap; /* Разрешаем перенос строки */
-            align-items: center;
-        }
-        #translateButton {
-            order: 0; /* Перемещаем кнопку на новую строку */
-            margin-top: 10px; /* Отступ сверху */
-            width: 100%; /* Занимает всю ширину строки */
-            justify-content: center; /* Центрируем внутри строки */
-        }
-        nav {
-            order: 1;
-            width: 100%;
-        }
-        nav ul {
-            display: none; /* Скрываем меню по умолчанию */
-        }
-        nav ul.open {
-            display: flex;
-            flex-direction: column;
-            position: static; /* Убираем абсолютное позиционирование */
-            width: 100%;
-            background: none; /* Убираем фон */
-            padding: 0;
-        }
-        nav ul.open li {
-            text-align: center;
-            padding: 10px 0;
-        }
-    }
 }
