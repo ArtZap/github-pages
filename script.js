@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     hamburger.classList.toggle("active");
   });
 
-  /* Р¤РѕСЂРјР° РѕР±СЂР°С‚РЅРѕР№ СЃРІСЏР·Рё */
+  /* Форма обратной связи */
   const feedbackBtn = document.getElementById("open-feedback");
   const feedbackPopup = document.getElementById("feedback-popup");
   const feedbackForm = document.getElementById("feedback-form-popup");
@@ -40,8 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (field.name === "phone") return /^\+?\d{7,15}$/.test(val);
     if (field.name === "email")
       return /^[\w.-]+@[\w.-]+\.[A-Za-z]{2,}$/.test(val);
-    if (field.name === "message")
-      return /^[A-Za-zРђ-РЇР°-СЏ0-9\s.,!?]+$/.test(val);
+    if (field.name === "message") return /^[A-Za-zА-Яа-я0-9\s.,!?]+$/.test(val);
     return true;
   }
 
@@ -59,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!valid) return;
 
     submitBtn.classList.add("sending");
-    submitBtn.textContent = "РћС‚РїСЂР°РІР»СЏРµРј...";
+    submitBtn.textContent = "Отправляем...";
     submitBtn.disabled = true;
 
     fetch(form.action, { method: "POST", body: new FormData(form) })
@@ -67,16 +66,16 @@ document.addEventListener("DOMContentLoaded", () => {
         if (res.ok) {
           submitBtn.classList.remove("sending");
           submitBtn.classList.add("success");
-          submitBtn.textContent = "РЈСЃРїРµС€РЅРѕ РѕС‚РїСЂР°РІР»РµРЅРѕ";
-        } else throw new Error("РћС€РёР±РєР°");
+          submitBtn.textContent = "Успешно отправлено";
+        } else throw new Error("Ошибка");
       })
       .catch(() => {
         submitBtn.classList.remove("sending");
-        submitBtn.textContent = "РћС€РёР±РєР° РѕС‚РїСЂР°РІРєРё";
+        submitBtn.textContent = "Ошибка отправки";
         submitBtn.disabled = false;
       });
   });
-  /* РђРЅРёРјР°С†РёСЏ SVG */
+  /* Анимация SVG */
   const rocketPath = document.getElementById("rocket-path");
   document.addEventListener("scroll", () => {
     const len = rocketPath.getTotalLength();
@@ -233,7 +232,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    langToggle.textContent = currentLang === "ru" ? "RU" : "EN";
+    langToggle.textContent = currentLang === "ru" ? "EN" : "RU";
   }
 
   langToggle.addEventListener("click", function () {
