@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
       why_item2: "Лучшие цены на рынке и только нужный ассортимент",
       why_item3: "Работаем оперативно, гибко, точно",
       why_tagline:
-        "«Мы знаем об СТМ всё!.. и даже немного больше.<br>Доверяйте профессионалам.»",
+        "«Мы знаем об СТМ всё!.. и даже немного больше. Доверяйте профессионалам.»",
       benefits_h2: "Выгоды СТМ",
       benefits_item1:
         "Зарабатывайте 150%...200%...300% при справедливой розничной цене",
@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
       why_item2: "Best prices on the market and only necessary range",
       why_item3: "We work promptly, flexibly, accurately",
       why_tagline:
-        '"We know everything about STM... and even a little more.<br>Trust professionals."',
+        '"We know everything about STM... and even a little more. Trust professionals."',
       benefits_h2: "STM Benefits",
       benefits_item1: "Earn 150%...200%...300% at fair retail price",
       benefits_item2:
